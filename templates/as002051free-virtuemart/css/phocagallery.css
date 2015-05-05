@@ -1,0 +1,30 @@
+/**************************************************************************************/
+/*
+/*		Designed by 'AS Designing'
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: Creative Commons
+/*
+/**************************************************************************************/
+
+#phocagallery-module-ri
+{
+	overflow: hidden;	
+}
+
+#phocagallery-module-ri center
+{
+	margin-left: 0px !important;
+}
+
+#footer .row2 #phocagallery-module-ri center
+{
+	margin-top: 6px !important;
+}
+
+#footer .row2 #phocagallery-module-ri div.mosaic a img 
+{
+    border: 1px solid #DDDDDD;
+	box-shadow: 0px 0px 0px #000000;
+}
+

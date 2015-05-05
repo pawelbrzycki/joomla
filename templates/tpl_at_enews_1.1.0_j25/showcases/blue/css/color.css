@@ -1,0 +1,38 @@
+a:hover, .at-news a:hover,
+div.itemHeader h2.itemTitle,
+.avatar-tree-menu a, 
+.avatar-tree-menu span,
+div.itemHeader h2.itemTitle,
+.at-menu-horizontal li ul li:hover >a,
+.at-menu-horizontal li ul li:hover > span,
+.avatar-blog .pagination_nav .center span,
+#avatar-footer-inside-block .at-usefull-link-bottom a:hover,
+.at-news .at-item-title a:hover,
+.at-news .at-item-readmore a:hover,
+.at-main-menu li ul .active > a,
+.at-main-menu li ul .active > span,
+.at-categories-module a:hover,
+.at-categories-module .active a,
+.items-more a:hover,
+.cat-children a:hover,
+.at-category-module a:hover,
+.at-pagination a,
+.at-page-heading,
+.at-contact .contact-name,
+.at-enews-logo a{
+	color: #0a86ca;
+}
+.at-pagination .pagination_nav > .pages > div span,.at-pagination .pagination_nav a:hover,.at-backdrop,
+.at-item-tags .tag:hover, div.k2TagCloudBlock a:hover,.jThumbnailScroller .jTscrollerNextButton:hover,.jThumbnailScroller .jTscrollerPrevButton:hover,
+#avatar-template table.calendar tr td.calendarToday,.at-social-enews-effect-2 ul li:hover div,
+.at-main-menu .at-menu-horizontal > .active,.at-main-menu .at-menu-horizontal > li:hover{
+	background-color: #0a86ca;
+}
+#avatar-full-6-block {
+	background-color: #0a86ca;
+}
+.at-main-menu .at-menu-horizontal ul{
+	border-top: 5px solid #0a86ca;
+}
+.at-bottom-menu .at-menu-horizontal a:hover,
+.at-bottom-menu .at-menu-horizontal span:hover{color: #000}

@@ -1,0 +1,79 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 5px 0 5px;
+	color: #1b1b1b;
+	line-height: 100%;
+}
+h1 {font-size: 24px;line-height: 24px;margin: 10px 0 10px;}
+h2 {font-size: 18px;line-height: 24px;}
+h3 {font-size: 15px;}
+h4 {font-size: 14px;}
+h5, h6 {font-weight: bold;}
+/* Image Style */
+
+
+/* FONT */
+p {
+	font-size: 12px;
+	line-height: 18px;
+}
+.blockquote, q, blockquote, blockquote *,.blockquote * {
+	font-size: 14px !important;
+	font-family: logofont;
+	color: #3c3c3c;
+}
+blockquote{border-left: none;}
+.text-drop-cap::first-letter {
+	float: left;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 8px 5px 0 0;
+    text-transform: uppercase;
+    color: #3c3c3c;
+}
+.box-content {
+	margin: 10px 0 15px 0;
+	padding: 20px;
+	border: 1px solid #c6c6c6;
+}
+.box-note {
+	margin: 10px 0 15px 0;
+	padding: 20px;
+	background: #efefef;
+	border: 1px solid #c6c6c6;
+}
+.box-info,.box-download,.box-hint,.box-warning {
+	min-height: 22px;
+	padding: 8px 8px 8px 28px;
+	line-height: 24px;
+	margin: 5px 15px;
+}
+.box-info {background: url("../images/icons/typo/info.png") no-repeat scroll 2px center;}
+.box-download {background: url("../images/icons/typo/download.png") no-repeat scroll 2px center;}
+.box-hint {background: url("../images/icons/typo/star.png") no-repeat scroll 2px center;}
+.box-warning {background: url("../images/icons/typo/warning.png") no-repeat scroll 2px center;}
+
+/*----Table-------*/
+.table-heading tbody tr:first-child td,
+.table-heading tbody tr:first-child th{
+	background-color: #e2e2e2;
+	font-family: mainfont;
+}
+.table-striped tbody tr:nth-child(2n+1) td,
+.table-striped tbody tr:nth-child(2n+1) th {
+	background-color: #e2e2e2;
+}
+.table-striped tbody tr:nth-child(2n) td,
+.table-striped tbody tr:nth-child(2n) th{
+	background-color: #f0f0f0;
+}
+
+.table tbody tr:hover td,.table tbody tr:hover th{background-color: #c8c8c8;}
+
+/*--------list style---------*/
+.even {background: #f1f1f1;padding: 2px;border-bottom: 1px dotted #ccc;}
+.the-arrow{list-style-image: url('../images/typo/arrow-right.png');}
+.the-dot{list-style-image: url('../images/typo/record.png');}
+.the-plus{list-style-image: url('../images/typo/plus.png');}
+.the-comment{list-style-image: url('../images/typo/message.png');margin-left: 20px;}

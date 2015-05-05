@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+    <name>Avatar Youtube</name>
+    <edition>Free</edition>
+    <version>1.0.8</version>
+	<creationDate>May 2012</creationDate>
+	<copyright>Amazing-Templates.com</copyright>
+	<license>License GNU General Public License version 2 or later</license>
+	<author>Tran Nam Chung</author>
+	<authorEmail>chungtn2910@gmail.com</authorEmail>
+	<authorUrl>www.amazing-templates.com</authorUrl>
+    <description>AVATAR_YOUTUBE_DESC</description>
+    <files>
+        <filename module="mod_avatar_youtube">mod_avatar_youtube.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_avatar_youtube.xml</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>elements</folder>
+        <folder>assets</folder>
+    </files>
+    <languages>
+		<language tag="en-GB">en-GB.mod_avatar_youtube.ini</language>
+		<language tag="en-GB">en-GB.mod_avatar_youtube.sys.ini</language>
+	</languages>
+     <config>
+    	<fields name="params">
+    		<fieldset name="settings" label="AVATAR_YOUTUBE_SOURCE_SETTINGS">
+    			<field name="moduleclass_sfx" type="text"  default="" label="AVATAR_SUFFIX" description="" />
+    			<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Source&lt;/div&gt;" />		   			
+    			<field name="source" type="radio" default="youtube" label="AVATAR_YOUTUBE_SOURCE" description="AVATAR_YOUTUBE_SOURCE_DESC">				
+					<option value="youtube">AVATAR_YOUTUBE_YOUTUBE</option>
+					<option value="vimeo">AVATAR_YOUTUBE_VIMEO</option>
+				</field>
+				<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Dimensions&lt;/div&gt;" />
+				<field name="width" type="text" default="600px" label="AVATAR_YOUTUBE_WIDTH" size="4" description="AVATAR_TWITTER_WIDTH_DESC"/>
+				<field name="height" type="text" default="380px" label="AVATAR_YOUTUBE_HEIGHT" size="4" description="AVATAR_TWITTER_HEIGHT_DESC"/>
+				<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Copyright&lt;/div&gt;" />		
+    			<field name="cr" type="hidden" default="true" label="AVATAR_COPYRIGHT" description="AVATAR_COPYRIGHT_DESC">	
+					<option value="true">AVATAR_YOUTUBE_YES</option>
+					<option value="false">AVATAR_YOUTUBE_NO</option>
+				</field>
+			</fieldset>
+			<fieldset name="youtube" label="AVATAR_YOUTUBE_SETTINGS">
+				<field name="youtubeType" type="radio" default="search" label="AVATAR_YOUTUBE_VIDEO_BY" description="AVATAR_YOUTUBE_VIDEO_BY_DESC">	
+					<option value="search">AVATAR_YOUTUBE_SEARCH</option>
+					<option value="user">AVATAR_YOUTUBE_USER_UPLOADS</option>
+					<option value="id">AVATAR_YOUTUBE_ID</option>
+					<option value="multiId">AVATAR_YOUTUBE_MULTI_ID</option>
+					<option value="list">AVATAR_YOUTUBE_LIST</option>
+				</field>
+				<field name="input" type="textarea" default="" label="AVATAR_YOUTUBE_QUERY" rows="3" cols="30" description="AVATAR_YOUTUBE_QUERY_DESC"/>
+				<field name="start" type="text" default="0" label="AVATAR_YOUTUBE_START_TIME" size="4" description="AVATAR_YOUTUBE_START_TIME_DESC"/>
+				<field name="theme" type="radio" default="dark" label="AVATAR_YOUTUBE_THEME" description="AVATAR_YOUTUBE_THEME_DESC">	
+					<option value="dark">AVATAR_YOUTUBE_DARK</option>
+					<option value="light">AVATAR_YOUTUBE_LIGHT</option>
+				</field>
+				<field name="color" type="radio" default="red" label="AVATAR_YOUTUBE_COLOR" description="AVATAR_YOUTUBE_COLOR_DESC">	
+					<option value="red">AVATAR_YOUTUBE_RED</option>
+					<option value="white">AVATAR_YOUTUBE_WHITE</option>
+				</field>
+				<field name="autoHide" type="radio" default="2" label="AVATAR_YOUTUBE_AUTO_HIDE" description="AVATAR_YOUTUBE_AUTO_HIDE_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+					<option value="2">AVATAR_YOUTUBE_DEFAULT</option>
+				</field>
+				<field name="autoPlay" type="radio" default="0" label="AVATAR_YOUTUBE_AUTO_PLAY" description="AVATAR_YOUTUBE_AUTO_PLAY_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="ccLoadPolicy" type="radio" default="0" label="AVATAR_YOUTUBE_CC_LOAD_POLICY" description="AVATAR_YOUTUBE_CC_LOAD_POLICY_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="controls" type="radio" default="1" label="AVATAR_YOUTUBE_CONTROL" description="AVATAR_YOUTUBE_CONTROL_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="enableJSAPI" type="radio" default="0" label="AVATAR_YOUTUBE_ENABLE_JS_API" description="AVATAR_YOUTUBE_ENABLE_JS_API_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="fs" type="radio" default="1" label="AVATAR_YOUTUBE_FS" description="AVATAR_YOUTUBE_FS_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="ivLoadPolicy" type="radio" default="1" label="AVATAR_YOUTUBE_IV_LOAD_POLICY" description="AVATAR_YOUTUBE_IV_LOAD_POLICY_DESC">	
+					<option value="1">AVATAR_YOUTUBE_1</option>
+					<option value="3">AVATAR_YOUTUBE_3</option>
+				</field>
+				<field name="loop" type="radio" default="0" label="AVATAR_YOUTUBE_LOOP" description="AVATAR_YOUTUBE_LOOP_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="rel" type="radio" default="1" label="AVATAR_YOUTUBE_REL" description="AVATAR_YOUTUBE_REL_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="showInfo" type="radio" default="1" label="AVATAR_YOUTUBE_SHOW_INFO" description="AVATAR_YOUTUBE_SHOW_INFO_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="logo" type="radio" default="1" label="AVATAR_YOUTUBE_LOGO" description="AVATAR_YOUTUBE_LOGO_DESC">	
+					<option value="0">AVATAR_YOUTUBE_YES</option>
+					<option value="1">AVATAR_YOUTUBE_NO</option>
+				</field>
+			</fieldset>
+			<fieldset name="vimeo" label="AVATAR_YOUTUBE_VIMEO_SETTINGS" addfieldpath="/modules/mod_avatar_youtube/elements">
+				<field name="vimeoInput" type="text" default="" label="AVATAR_YOUTUBE_VIMEO_ID" size="30" description="AVATAR_YOUTUBE_VIMEO_ID_DESC"/>
+				<field name="vimeoColor" type="colorpicker" default="#00adef" label="AVATAR_YOUTUBE_VIMEO_COLOR" description="AVATAR_YOUTUBE_VIMEO_COLOR_DESC" />
+				<field name="vimeoTitle" type="radio" default="1" label="AVATAR_YOUTUBE_VIMEO_TITLE" description="AVATAR_YOUTUBE_VIMEO_TITLE_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoByLine" type="radio" default="1" label="AVATAR_YOUTUBE_VIMEO_BY_LINE" description="AVATAR_YOUTUBE_VIMEO_BY_LINE_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoPortrait" type="radio" default="1" label="AVATAR_YOUTUBE_VIMEO_PORTRAIT" description="AVATAR_YOUTUBE_VIMEO_PORTRAIT_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoFS" type="radio" default="0" label="AVATAR_YOUTUBE_VIMEO_FULLSCREEN" description="AVATAR_YOUTUBE_VIMEO_FULLSCREEN_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoAutoPlay" type="radio" default="0" label="AVATAR_YOUTUBE_AUTO_PLAY" description="AVATAR_YOUTUBE_VIMEO_AUTO_PLAY_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoLoop" type="radio" default="0" label="AVATAR_YOUTUBE_LOOP" description="AVATAR_YOUTUBE_VIMEO_LOOP_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+				<field name="vimeoAPI" type="radio" default="0" label="AVATAR_YOUTUBE_VIMEO_API" description="AVATAR_YOUTUBE_VIMEO_API_DESC">	
+					<option value="1">AVATAR_YOUTUBE_YES</option>
+					<option value="0">AVATAR_YOUTUBE_NO</option>
+				</field>
+			</fieldset>
+    	</fields>	
+    </config>
+</extension>

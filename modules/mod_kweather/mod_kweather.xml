@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>KWeather</name>
+	<author>Paul van Haren</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2012 - 2013 Kaleidoscoop-Web.com. All rights
+		reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@kaleidoscoop-web.com</authorEmail>
+	<authorUrl>www.kaleidoscoop-web.com</authorUrl>
+	<version>1.1</version>
+	<description><![CDATA[
+        	<style type="text/css">
+        	span.readonly { padding: 10px; font-family: Arial; font-size:11px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 19px; }
+        	span.readonly h1 { clear:both; font-family: Georgia, sans-serif; font-size:24px; margin:30px 20px 23px; padding:0px 0px 24px 10px; color:#333; border-bottom: 1px solid #eee; font-weight: normal; }
+        	span.readonly p { margin: 0 26px 10px }
+        	span.readonly p a { color: #c78900 }
+        	span.readonly p.homepage { margin-top: 30px }
+        	span.readonly p.license { border-top: 1px solid #eee; font-size: 10px; margin: 30px 26px 0; padding: 6px 0; }
+        	</style>
+        	<span class="readonly"><h1>Kaleidoscoop Weather Module <small>ver. 1.2</small></h1>
+		<p>Kaleidoscoop Weather Module provides an easy to use module to display the current weather and the forecast for any place in the world. 
+		  This weather module makes use of <a target="_blank" href="http://www.wunderground.com/">Wunderground weahther information service.</a></p>
+		  <p>In order to use this module, you'll need an user key from Wunderground. Get youself an API key <a href="http://www.kaleidoscoop-web.com/wunderground-api-key">following the instructions here</a>. The
+		    developer license using the Anvil plan is sufficient for normal usage. The good news is, the developer license is free!</p>
+		  <p>Kaleidoscoop provides a collection of stylish weather icons for this weahther module. Please download these icons from <a href="http://www.kaleidoscoop-web.com/extensions/kweather" target="_blank">our website.</a> You can also find additional language files here.</p>
+		  <p>If you like this module and would like to contribute, you can help us in many ways:
+		    <ul>
+		      <li><a href="http://extensions.joomla.org/extensions/maps-a-weather/weather/weather-forecasts/22724/review">Tell us how you like this extension on JED.</a></li>
+		      <li>Create a translation on your own language and <a href="mailto:info@kaleidoscoop-web.com">share that with us</a>.</li>
+		      <li>Consider a donation.
+			  <p style="display:block;">
+			    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A3GG7XKKVH4ES"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"></a>
+			  </p>
+		      </li>
+		  </ul>
+		<p class='license'>Kaleidoscoop Weather Module is released under the <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></p></span>
+
+        ]]></description>
+
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_kweather.ini</language>
+		<language tag="en-GB">language/en-GB.mod_kweather.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_kweather">mod_kweather.php</filename>
+		<folder>tmpl/</folder>
+		<folder>assets/</folder>		
+		<folder>fields/</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<media folder="media" destination="mod_kweather">
+		<folder>icons/</folder>
+	</media>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Kaleidoscoop Updates">http://kaleidoscoop-web.com/extensions/extensions.xml
+		</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset addfieldpath="/modules/mod_kweather/fields" />
+			<fieldset name="basic">
+
+				<field name="wunderground_key" type="text" default=""
+					label="WUNDERGROUND_KEY" description="WUNDERGROUND_KEY_DESC">
+				</field>
+				<field name="wlogo" type="filelist" default="default" label="WLOGO_LABEL" description="WLOGO_DESC" 
+					directory="modules/mod_kweather/assets/images/Wunderground-logo" hide_none="1" hide_default="1" />
+				<field name="locationName" type="text" default="" label="LOCATION_NAME"
+					description="LOCATION_NAME_DESC">
+				</field>
+				<field name="location" type="location" default="" label="LOCATION"
+					description="LOCATION_DESC">
+				</field>
+				<field name="city" type="radio" class="btn-group" default="1" label="CITY" description="CITY_DESC">
+					<option value="0">HIDE</option>
+					<option value="1">SHOW</option>
+				</field>
+				<field name="condition" type="radio" class="btn-group" default="1" label="CONDITION" description="CONDITION_DESC">
+					<option value="0">HIDE</option>
+					<option value="1">SHOW</option>
+				</field>
+				<field name="humidity" type="radio" class="btn-group" default="1" label="HUMIDITY" description="HUMIDITY_DESC">
+					<option value="0">HIDE</option>
+					<option value="1">SHOW</option>
+				</field>		
+				<field name="wind" type="radio" class="btn-group" default="1" label="WIND" description="WIND_DESC">
+					<option value="0">HIDE</option>
+					<option value="1">SHOW</option>
+				</field>
+				<field name="forecast" type="list" default="4" label="FORECAST" description="FORECAST_DESC">
+					<option value="1">1DAY</option>
+					<option value="2">2DAYS</option>			
+					<option value="3">3DAYS</option>			
+					<option value="4">4DAYS</option>
+					<option value="disabled">DISABLED</option>			
+				</field>		
+				<field name="layout" type="list" default="block" label="LAYOUT" description="LAYOUT_DESC">
+					<option value="block">BlOCK</option>
+					<option value="list">LIST</option>			
+				</field>
+				<field name="separator" type="text" default="/" label="SEPARATOR" description="SEPARATOR_DESC" />			
+				<field name="tempUnits" type="list" default="c" label="UNIT" description="UNIT_DESC">
+					<option value="c">CELSIUS</option>
+					<option value="f">FAHRENHEIT</option>
+				</field>
+				<field name="lengthUnits" type="list" default="k" label="LENGTH_UNITS"
+					description="LENGTH_UNITS_DESC">
+					<option value="m">Miles</option>
+					<option value="k">Kilometers</option>
+				</field>
+				<field name="iconset" type="folderlist" default="default" label="ICONSET" description="ICONSET_DESC" directory="media/mod_kweather/icons" hide_none="1" hide_default="1" />
+
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="MODSFX"
+					description="MODSFX_DESC" />
+				<field name="cache" type="hidden" default="0" />
+				<field name="useCache" type="list" default="0" label="USECACHE"
+					description="USECACHE_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="cacheTime" type="text" default="900" label="CACHETIME"
+					description="CACHETIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
